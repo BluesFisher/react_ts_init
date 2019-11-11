@@ -1,27 +1,32 @@
 import * as React from 'react';
 
 export interface IBodyFooterProps {
-    style?: object,
-    children?: React.ReactNode,
+    style?: object;
+    children?: React.ReactNode;
 }
 
 export interface IProps {
-    isShowPop: boolean,
-    isBackIcon?: boolean,
-    isVisible?: "visible" | "hidden",
-    onCancel?: () => void,
-    title?: string,
+    isShowPop: boolean;
+    isBackIcon?: boolean;
+    isVisible?: 'visible' | 'hidden';
+    onCancel?: () => void;
+    title?: string;
     size?: {
-        width: string,
-        height: string,
-    },
-    modal?: boolean,
-    customClass?: string,
-    children?: React.ReactNode,
+        width: string;
+        height: string;
+    };
+    modal?: boolean;
+    customClass?: string;
+    children?: React.ReactNode;
+}
+
+export interface IDom {
+    Body: React.FC<IBodyFooterProps>;
+    Footer: React.FC<IBodyFooterProps>;
 }
 
 export interface IBodyOut {
-    defaultProps?: any,
-    Body?: React.ReactNode,
-    Footer?: React.ReactNode,
+    defaultProps?: any;
+    Body?: React.ReactNode;
+    Footer?: React.ReactNode;
 }

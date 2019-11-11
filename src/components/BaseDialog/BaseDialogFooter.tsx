@@ -1,11 +1,12 @@
-import * as React from "react";
-import { IBodyFooterProps } from "./base-dialog";
+import * as React from 'react';
+import { IBodyFooterProps } from './base-dialog';
 
-export default function BaseDialogFooter(props: IBodyFooterProps): JSX.Element {
+const BaseDialogFooter: React.FC<IBodyFooterProps> = (props: IBodyFooterProps) => {
+    return (
+        <div className="baseDialog-footer" style={props.style}>
+            {props.children}
+        </div>
+    );
+};
 
-  return (
-    <div className="baseDialog-footer" style={props.style}>
-      {props.children}
-    </div>
-  )
-}
+export default BaseDialogFooter;
